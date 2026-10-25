@@ -1,0 +1,5 @@
+; Update list for Item Mall Wishlist. Upload this next to mod.ini and the files folder.
+version=1.0
+b24da3382ad3fc94ed3ff7f26863aa2190216472|mod.ini
+8bd35a0af0ed3b70fa237234c5cb80be0846a2fd|files/Data/ui/themes/rose/game/item_mall.css
+2bf7c94522a8e8164ee73eb482c5f5f629d8e9e0|files/Data/ui/themes/rose/game/item_mall.html
