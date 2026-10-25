@@ -2,7 +2,7 @@
 body#item-mall { width: 1080dp; height: 700dp; max-width: 96vw; max-height: 94vh; box-sizing: border-box; padding-top: 34dp; }
 body#item-mall #window-content { height: 100%; max-height: none; padding: 6dp; overflow: visible; }
 #mall-shell { display: flex; flex-direction: column; height: 100%; }
-#mall-balance { position: absolute; right: 30dp; top: -28dp; height: 26dp; box-sizing: border-box; padding: 2dp 10dp; border-radius: 12dp; }
+#mall-balance { position: absolute; right: 30dp; top: -30dp; height: 26dp; box-sizing: border-box; padding: 2dp 10dp; border-radius: 12dp; }
 #mall-balance img { width: 18dp; min-width: 18dp; height: 18dp; }
 #mall-balance span { font-size: 11dp; }
 #mall-toolbar { display: flex; align-items: center; gap: 8dp; height: 38dp; flex-shrink: 0; }
@@ -108,3 +108,6 @@ item-slot .mall-overlay { position: absolute; left: -6dp; top: -4dp; width: 56dp
 #mall-wish.on { image-color: rgb(255, 150, 60); }
 .mall-nav-row.wishlist { color: rgb(255, 170, 80); border-bottom: 1dp rgb(120, 120, 120); margin-bottom: 4dp; }
 .mall-nav-row.wishlist.active { color: rgb(255, 230, 110); }
+/* Title bar: the mall's bar is 34dp tall, so centre the title and the X in it */
+body#item-mall > .window-title { height: 34dp; line-height: 34dp; }
+body#item-mall > button.window-title-close { top: 4dp; }
