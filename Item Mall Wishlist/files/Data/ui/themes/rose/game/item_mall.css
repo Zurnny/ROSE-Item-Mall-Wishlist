@@ -2,7 +2,7 @@
 body#item-mall { width: 1080dp; height: 700dp; max-width: 96vw; max-height: 94vh; box-sizing: border-box; padding-top: 34dp; }
 body#item-mall #window-content { height: 100%; max-height: none; padding: 6dp; overflow: visible; }
 #mall-shell { display: flex; flex-direction: column; height: 100%; }
-#mall-balance { position: absolute; right: 34dp; top: -32dp; height: 26dp; padding: 2dp 10dp; border-radius: 12dp; }
+#mall-balance { position: absolute; right: 30dp; top: -28dp; height: 26dp; box-sizing: border-box; padding: 2dp 10dp; border-radius: 12dp; }
 #mall-balance img { width: 18dp; min-width: 18dp; height: 18dp; }
 #mall-balance span { font-size: 11dp; }
 #mall-toolbar { display: flex; align-items: center; gap: 8dp; height: 38dp; flex-shrink: 0; }
