@@ -1,7 +1,7 @@
 /* Item mall styles for the default UI and the Steampunk UI theme (see the theme check in item_mall.html) */
-            /* ==== Parts of the page for one look only ==== */
-            .sp-only-steampunk { display: none; }
-            .sp-theme-steampunk .sp-only-default { display: none; }
+            /* ==== Parts of the page for one look only (the other look's part stays hidden) ==== */
+            .sp-theme-default .sp-only-steampunk { display: none !important; }
+            .sp-theme-steampunk .sp-only-default { display: none !important; }
 
             /* ==== Both looks ==== */
             body#item-mall { width: 1080dp; height: 700dp; max-width: 96vw; max-height: 94vh; box-sizing: border-box; padding-top: 34dp; }
