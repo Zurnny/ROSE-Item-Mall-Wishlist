@@ -550,7 +550,43 @@ document:AddEventListener('mall-tick', function(event)
 end)
 
     </script>
-</head>
+        <style>
+            /* ==== Parts of the page for one look only ==== */
+            .sp-only-steampunk { display: none; }
+            .sp-theme-steampunk .sp-only-default { display: none; }
+
+            /* ==== Both looks ==== */
+
+            /* ==== Default UI look only ==== */
+
+            /* ==== Steampunk look only ==== */
+
+        </style>
+        <script>
+-- Theme check (add-on windows work with the default UI and with the Steampunk
+-- UI theme). Steampunk is installed when styles/steampunk.css exists; then this
+-- window gets the class sp-theme-steampunk and uses the Steampunk look,
+-- otherwise sp-theme-default and the game's own look. SP_THEME says which.
+pcall(function()
+    local sp = false
+    pcall(function()
+        local f = io.open('Data/ui/themes/rose/styles/steampunk.css', 'r')
+        if f then f:close(); sp = true end
+    end)
+    SP_THEME = sp and 'steampunk' or 'default'
+    local body = document:GetElementById('item-mall')
+    if body then
+        body:SetClass('sp-theme-default', not sp)
+        body:SetClass('sp-theme-steampunk', sp)
+    end
+    -- parts written for the other look are taken out, so only one of each is left
+    local gone, list = {}, document:QuerySelectorAll(sp and '.sp-only-default' or '.sp-only-steampunk')
+    local i = list[0] and 0 or 1
+    while list[i] do gone[#gone + 1] = list[i]; i = i + 1 end
+    for _, e in ipairs(gone) do pcall(function() e.parent_node:RemoveChild(e) end) end
+end)
+        </script>
+    </head>
 <body id="item-mall" template="window-fixed-size">
     <div id="mall-balance" class="ui-currency content-box"><img sprite="mall-points" /><b id="mall-points">0</b><span>PTS</span></div>
     <div id="mall-shell">
